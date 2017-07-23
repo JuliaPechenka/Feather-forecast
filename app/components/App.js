@@ -1,18 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import HelloWorld from './HelloWorld/HelloWorld';
+import CurrentWeather from './CurrentWeather/CurrentWeather';
 
 const App = props => {
     return (
         <Router>
-            <div>
-                <div className="container">
-                    <Switch>
-                        <Route exact path='/' component={HelloWorld} />
-                    </Switch>
-                </div>
-            </div>
+            <Switch>
+                <Route exact path='/' component={CurrentWeather} />
+            </Switch>
         </Router>
 )
 };

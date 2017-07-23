@@ -1,0 +1,51 @@
+.weather {
+  padding-top: 50px;
+  .current-weather {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+  }
+  .forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item {
+      width: 20%;
+      background: white;
+      margin: 20px 10px;
+    }
+  }
+  &.day {
+    background: url(../app/content/images/day.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  &.night {
+    background: url(../app/content/images/night.JPG);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+i.animated {
+  font-size: 50px;
+  animation: rotation 10s infinite;
+}
+
+@keyframes rotation {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -50px;
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: 50px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "React-dev-package",
   "version": "1.0.0",
-  "description": "This is simple react Hello world! app designed for easy development and production",
+  "description": "React web application to forecast feather",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
