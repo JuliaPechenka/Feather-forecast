@@ -30,20 +30,27 @@
   font-style: normal;
 }
 
+html, body, div#app {
+  height: 100%;
+}
+
 body {
-  font-family: 'Lemonada-Regular', sans-serif;
+  font-family: 'Amaranth', sans-serif;
   margin: 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
-h1 {
-  font-size: 50px;
-  line-height: 50px;
-  padding: 25px 0;
-  margin: 0;
+.main-title {
+  font-family: 'Righteous', cursive;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+  padding: 50px 20px 0;
+  text-align: left;
 }
