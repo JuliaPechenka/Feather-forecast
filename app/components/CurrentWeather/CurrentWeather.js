@@ -71,9 +71,9 @@ class CurrentWeather extends React.Component {
                             <img src="../app/content/images/storm_white.png"/>}
                         </div>
                         <div className="details">
-                            <div><span className="title">Humidity:</span> {this.state.now.main.humidity} %</div>
-                            <div><span className="title">Pressure:</span> {this.state.now.main.pressure} hPa</div>
-                            <div><span className="title">Wind:</span> {this.state.now.wind.speed} m/s</div>
+                            <div><span className="title">Humidity:</span> {this.state.now.main.humidity}&nbsp;%</div>
+                            <div><span className="title">Pressure:</span> {this.state.now.main.pressure}&nbsp;hPa</div>
+                            <div><span className="title">Wind:</span> {this.state.now.wind.speed}&nbsp;m/s</div>
                             <div><span className="title">Sunrise:</span> {this.state.now.sys.sunriseDate}</div>
                             <div><span className="title">Sunset:</span> {this.state.now.sys.sunsetDate}</div>
                         </div>

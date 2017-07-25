@@ -20,8 +20,9 @@
         padding: 5px 0;
       }
       .temperature {
+        font-family: 'Righteous', cursive;
         font-size: 80px;
-        font-weight: bold;
+        //font-weight: bold;
         letter-spacing: 2px;
         padding-top: 10px;
       }
@@ -29,7 +30,7 @@
     .image {
       width: 45%;
       text-align: center;
-      padding-top: 30px;
+      padding: 30px 0;
       animation: puls 5s infinite;
     }
     .details {
@@ -41,6 +42,7 @@
         display: inline-block;
         min-width: 180px;
         color: #1a507e;
+        font-weight: bold;
       }
     }
   }
@@ -75,8 +77,8 @@
     }
   }
   &.day {
-    background-image: radial-gradient(circle at 70% 10%,#fbf5a9 5%,#66a5db 20%,#1a507e);
-    background-attachment: fixed;
+    //background-image: radial-gradient(circle at 70% 10%,#fbf5a9 5%,#66a5db 20%,#1a507e);
+    //background-attachment: fixed;
   }
   &.night {
     background-image: radial-gradient(circle at 70% 100%, #976b00 5%, #2c4a9f 10%, #000014);
@@ -103,5 +105,34 @@
   }
   100% {
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 970px) {
+  .weather {
+    .current-weather {
+      .today {
+        width: 35%;
+      }
+      .image {
+        width: 25%;
+      }
+    }
+    .forecast {
+      .day {
+        width: calc(100%/3 - 30px);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .weather {
+    .current-weather, .forecast {
+      display: inherit;
+      .today, .image, .details, .day {
+        width: inherit;
+      }
+    }
   }
 }

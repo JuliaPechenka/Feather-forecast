@@ -2,41 +2,16 @@
 
 @import '../app/components/CurrentWeather/current-weather';
 
-@font-face {
-  font-family: 'Lemonada-Light';
-  src: url('../app/content/fonts/Lemonada/Lemonada-Light.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lemonada-Regular';
-  src: url('../app/content/fonts/Lemonada/Lemonada-Regular.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lemonada-SemiBold';
-  src: url('../app/content/fonts/Lemonada/Lemonada-SemiBold.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lemonada-Bold';
-  src: url('../app/content/fonts/Lemonada/Lemonada-Bold.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html, body, div#app {
   height: 100%;
 }
 
 body {
-  font-family: 'Amaranth', sans-serif;
+  font-family: 'Dosis', sans-serif;
   margin: 0;
+  background-image: radial-gradient(circle at 70% 10%,#fbf5a9 5%,#66a5db 20%,#1a507e);
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .container {
