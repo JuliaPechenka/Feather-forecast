@@ -37,11 +37,11 @@ var config = {
             },
             {
                 test: /\.(jpg?g|jpeg|png|gif)$/i,
-                loader: "file-loader?name=content/images/[name].[ext]"
+                loader: "file-loader?name=app/content/images/[name].[ext]"
             },
             {
                 test: /\.(svg|woff|woff2|ttf|eot)(\?.*$|$)/,
-                loader: "file-loader?name=content/fonts/[name].[ext]"
+                loader: "file-loader?name=app/content/fonts/[name].[ext]"
             }
         ]
     },

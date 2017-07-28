@@ -18,13 +18,14 @@ class CurrentWeather extends React.Component {
 
         api.getCurrentWeather()
             .then(function(response){
-                console.log(response);
                 response.sys.sunriseDate = new Date(response.sys.sunrise*1000).getHours() + ':' + new Date(response.sys.sunrise*1000).getMinutes();
                 response.sys.sunsetDate = new Date(response.sys.sunset*1000).getHours() + ':' + new Date(response.sys.sunset*1000).getMinutes();
                 this.setState({
                     now: response
                 });
             }.bind(this));
+
+
         api.getForecast()
             .then(function(response){
                 const dayForecast = [];
@@ -36,7 +37,6 @@ class CurrentWeather extends React.Component {
                         new Date(dayForecast[i][0].dt_txt).getDate() + ', ' +
                         (1900 + new Date(dayForecast[i][0].dt_txt).getYear());
                 }
-                console.log(dayForecast);
                 this.setState({
                     dayForecast: dayForecast
                 })
@@ -59,16 +59,7 @@ class CurrentWeather extends React.Component {
                             </div>
                         </div>
                         <div className="image">
-                            {this.state.now.weather[0].main === 'Clear' &&
-                            <img src="../app/content/images/sun_white.png"/>}
-                            {this.state.now.weather[0].main === 'Clouds' &&
-                            <img src="../app/content/images/clouds_white.png"/>}
-                            {this.state.now.weather[0].main === 'Rain' &&
-                            <img src="../app/content/images/rain_white.png"/>}
-                            {this.state.now.weather[0].main === 'Snow' &&
-                            <img src="../app/content/images/snow_white.png"/>}
-                            {this.state.now.weather[0].main === 'Storm' &&
-                            <img src="../app/content/images/storm_white.png"/>}
+                            <div className={'weather-icon ' +  this.state.now.weather[0].main}></div>
                         </div>
                         <div className="details">
                             <div><span className="title">Humidity:</span> {this.state.now.main.humidity}&nbsp;%</div>
@@ -88,11 +79,7 @@ class CurrentWeather extends React.Component {
                                         <div className="week-day">{day.weekday}</div>
                                         <div className="temperature"><i className="fa fa-thermometer-full" aria-hidden="true"></i>&nbsp;
                                             {(this.state.now.main.temp - 273.15).toFixed(0)}&deg;C</div>
-                                        {this.state.now.weather[0].main === 'Clear' && <img src="../app/content/images/sun_white.png" />}
-                                        {this.state.now.weather[0].main === 'Clouds' && <img src="../app/content/images/clouds_white.png" />}
-                                        {this.state.now.weather[0].main === 'Rain' && <img src="../app/content/images/rain_white.png" />}
-                                        {this.state.now.weather[0].main === 'Snow' && <img src="../app/content/images/snow_white.png" />}
-                                        {this.state.now.weather[0].main === 'Storm' && <img src="../app/content/images/storm_white.png" />}
+                                        <div className={'weather-icon ' + this.state.now.weather[0].main}></div>
                                         <div className="description">{this.state.now.weather[0].description}</div>
                                     </div>
                                 )
@@ -103,11 +90,7 @@ class CurrentWeather extends React.Component {
                                         <div className="week-day">{day.weekday}</div>
                                         <div className="temperature"><i className="fa fa-thermometer-full" aria-hidden="true"></i>&nbsp;
                                             {(day[4].main.temp - 273.15).toFixed(0)}&deg;C</div>
-                                        {day[4].weather[0].main === 'Clear' && <img src="../app/content/images/sun_white.png" />}
-                                        {day[4].weather[0].main === 'Clouds' && <img src="../app/content/images/clouds_white.png" />}
-                                        {day[4].weather[0].main === 'Rain' && <img src="../app/content/images/rain_white.png" />}
-                                        {day[4].weather[0].main === 'Snow' && <img src="../app/content/images/snow_white.png" />}
-                                        {day[4].weather[0].main === 'Storm' && <img src="../app/content/images/storm_white.png" />}
+                                        <div className={'weather-icon ' + day[4].weather[0].main}></div>
                                         <div className="description">{day[4].weather[0].description}</div>
                                     </div>
                                 )
