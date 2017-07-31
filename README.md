@@ -1,2 +1,2 @@
 # Feather-forecast
-React web application to forecast feather
+React web application to forecast weather
